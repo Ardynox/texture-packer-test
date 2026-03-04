@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://72q84tf7jskd"]
+
+[ext_resource type="Script" uid="uid://cp7m7ouloatuf" path="res://TexturePackerDemo.cs" id="1"]
+
+[node name="TexturePackerDemo" type="Control" unique_id=424331293]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="VBox" type="VBoxContainer" parent="." unique_id=190764837]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -900.0
+offset_bottom = -800.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="TopBar" type="HBoxContainer" parent="VBox" unique_id=1405363312]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="VBox/TopBar" unique_id=678601736]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "就绪"
+vertical_alignment = 1
+
+[node name="AtlasInfoLabel" type="Label" parent="VBox/TopBar" unique_id=2082082338]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "尚未生成图集"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Toolbar" type="HBoxContainer" parent="VBox" unique_id=305694353]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="BtnAdd" type="Button" parent="VBox/Toolbar" unique_id=1540848833]
+layout_mode = 2
+text = "添加"
+
+[node name="BtnAddBatch" type="Button" parent="VBox/Toolbar" unique_id=409925037]
+layout_mode = 2
+text = "批量"
+
+[node name="BtnRemove" type="Button" parent="VBox/Toolbar" unique_id=1428113617]
+layout_mode = 2
+text = "移除"
+
+[node name="BtnMerge" type="Button" parent="VBox/Toolbar" unique_id=1392584764]
+layout_mode = 2
+text = "打包"
+
+[node name="BtnClear" type="Button" parent="VBox/Toolbar" unique_id=1405701649]
+layout_mode = 2
+text = "清空"
+
+[node name="VSep" type="VSeparator" parent="VBox/Toolbar" unique_id=1785336590]
+layout_mode = 2
+
+[node name="SizeLabel" type="Label" parent="VBox/Toolbar" unique_id=1296657192]
+layout_mode = 2
+text = "图集上限: 2048"
+vertical_alignment = 1
+
+[node name="SizeSlider" type="HSlider" parent="VBox/Toolbar" unique_id=417886704]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+min_value = 256.0
+max_value = 4096.0
+step = 256.0
+value = 2048.0
+
+[node name="MarginLabel" type="Label" parent="VBox/Toolbar" unique_id=1763575219]
+layout_mode = 2
+text = "间距: 2"
+vertical_alignment = 1
+
+[node name="MarginSlider" type="HSlider" parent="VBox/Toolbar" unique_id=2107253971]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+max_value = 16.0
+value = 2.0
+
+[node name="MainArea" type="HSplitContainer" parent="VBox" unique_id=749541335]
+layout_mode = 2
+size_flags_vertical = 3
+split_offsets = PackedInt32Array(600)
+split_offset = 600
+
+[node name="AtlasPanel" type="PanelContainer" parent="VBox/MainArea" unique_id=457149110]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AtlasView" type="TextureRect" parent="VBox/MainArea/AtlasPanel" unique_id=277130832]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch_mode = 6
+
+[node name="IconPanel" type="PanelContainer" parent="VBox/MainArea" unique_id=1887342012]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+
+[node name="IconScroll" type="ScrollContainer" parent="VBox/MainArea/IconPanel" unique_id=1211991312]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="IconGrid" type="GridContainer" parent="VBox/MainArea/IconPanel/IconScroll" unique_id=1809366083]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 3

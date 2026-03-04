@@ -1,0 +1,29 @@
+# Godot 4+ specific ignores
+.godot/
+.import/
+export_presets.cfg
+
+# Imported translations (automatically generated from csv files)
+*.translation
+
+# Mono/C# ignores
+.mono/
+.vscode/
+bin/
+obj/
+*.csproj.user
+*.sln.user
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Texture Packer Specific
+source/
+source_textures.zip
+
+# UID files
+*.uid
+
+# Plugins
+godot-git-plugin-v3.2.1/
